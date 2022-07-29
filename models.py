@@ -2,7 +2,7 @@ from ctypes import sizeof
 from flask import appcontext_pushed
 from flask_sqlalchemy import SQLAlchemy
 
-db = SQLAlchemy()
+db = SQLAlchemy(app)
 
 def connect_db(app):
     db.app = app
