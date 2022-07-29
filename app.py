@@ -6,6 +6,7 @@ from models import Bike, db, connect_db
 debug = DebugToolbarExtension()
 
 app = Flask(__name__)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///bike_shop_db'
 app.config['SQLALCHEMY_ECHO'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -13,6 +14,8 @@ app.config['SECRET_KEY'] = '12m45'
 
 connect_db(app)
 db.create_all()
+if __name__ == '__main__':
+    app.run(debug=True)
 
 @app.route('/home')
 def home_page():
