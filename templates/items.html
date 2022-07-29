@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Collection{% endblock %}
+{% block content %}
+    <div id = 'main' class="container">
+        <h2>
+           <u>Our Collection</u> 
+        </h2>
+    </div>
+    <div id = 'itemspic'></div>
+    <div class="row" id="items">
+        {% for bike in bikes %}
+        <div class="col-sm">
+            <div class="rounded">
+                <a href="/collection/{{bike.id}}">
+                <label id = 'name_link' class="bike_name"><u>{{bike.name}}</u></label>
+                <img src="{{bike.image_url}}" alt="{{bike.name}}" class = 'img'>
+                <br>
+                
+                </a>
+                <p class = 'price'>${{bike.price}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %} 

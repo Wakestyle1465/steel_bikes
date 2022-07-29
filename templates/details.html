@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}{{bike.name}}{% endblock %}
+{% block content %}
+<div id = 'item-detail'>
+    <h2>
+        {{bike.name}}
+    </h2>
+    <p id ='bdp'>${{bike.price}}</p>
+    <img src="{{bike.image_url}}" alt="{{bike.name}}">
+    <p id = 'bike-descr' class = 'container'>{{bike.description}}</p>
+
+
+</div>
+{% endblock %}

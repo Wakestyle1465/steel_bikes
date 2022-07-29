@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/bike.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body id = 'baseBody'>
+  <div class = 'sticky-top' id = 'navbar'>
+    <nav class="navbar navbar-dark bg-dark ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <u> Steel Bikes</u>
+          <img src="https://us.123rf.com/450wm/kasyanovcreation/kasyanovcreation1909/kasyanovcreation190900056/133294624-vector-colourful-illustration-of-a-skull-cyclist-in-helmet.jpg?ver=6" alt="" width="50" height="50" class="">
+        
+        </a>
+        
+      </div>
+    </nav>
+    <nav class ='navbar navbar-dark bg-dark'>
+      <div id="nav_div">
+        <div class="collapse"id="navbarToggleExternalContent">
+        <div class="navbar-light-toggler-icon-bg" id = 'navbrtxt'>
+          <span  class="text-muted navtxt container" >
+            <a class = 'navcont' href="/home">Home</a>
+          </span>
+          <li><hr class="dropdown-divider"></li>
+          <span class="text-muted navtxt container" id = 'navtxt'>
+            <a class = 'navcont' href="/collection">Collection</a>
+          </span>
+          <li><hr class="dropdown-divider"></li>
+          <span class="text-muted navtxt container">
+            <a class = 'navcont' href="/about-us">About Us</a>
+          </span>
+        </div>
+      </div>
+      
+    </nav>
+    
+  </div>
+
+  </div>
+    
+    {% block content %}
+    {% endblock %}
+<footer class = 'bg-dark ' id = 'contact'>
+    <h2>Contact Us!</h2>
+    <p>
+        Address: 1234 Apple Street, Tampa, Fl
+    </p>
+    <p>
+        Phone: (777)-689-3212
+    </p>
+    <p>
+        Email: Steelbikes@gmail.com
+    </p>
+</footer>
+</body>
+<script src="static/bike.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</html>
